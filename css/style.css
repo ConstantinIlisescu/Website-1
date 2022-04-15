@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Libre+Baskerville:ital@1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;900&family=Whisper&display=swap&family=Archivo+Black&family=Libre+Baskerville:ital@1&display=swap');
 
 :root {
     --primaryPink: 255, 249, 246;
@@ -7,7 +6,15 @@
     --secondaryPink: 255, 203, 203;
     --secondaryBlue: 165, 221, 255;
     --secondaryDarkGrey: 51, 51, 51;
-    --divWidth: 1300px;
+    --divWidth: 1400px;
+}
+
+.main-section-text button:hover,
+.service button:hover,
+.price-div button:hover,
+.price-description-card a button:hover,
+.picture-galery:hover {
+    cursor: pointer;
 }
 
 * {
@@ -42,14 +49,19 @@ a {
     justify-content: center;
 }
 
-nav , nav ul{
+nav {
+    display: flex;
+    width: var(--divWidth);
+    margin: 0 auto;
+}
+ nav ul{
     display: inline-flex;
     align-items: center;
 }
 
 nav img {
     width: 80px;
-    margin: 20px 30px 20px 250px;
+    margin: 20px 30px 20px 50px;
 }
 
 nav ul li {
@@ -66,6 +78,7 @@ nav ul li a:hover{
 
 /* Main Top Section */
 .main-picture {
+    z-index: -10;
     position: absolute;
     top: -70px;
     right: 10%;
@@ -77,7 +90,7 @@ nav ul li a:hover{
 
 .main-section-text-div {
     z-index: 1 ;
-    width: 1400px;
+    width: var(--divWidth);
     height: 800px;
 }
 
@@ -109,11 +122,7 @@ nav ul li a:hover{
     font-weight:700;
 }
 
-.main-section-text button:hover , 
-.service button:hover , 
-.price-div button:hover {
-    cursor: pointer;
-}
+
 
 /* Seccond section*/
 
@@ -165,6 +174,7 @@ nav ul li a:hover{
     margin-bottom: 20px;
 }
 
+
 .service button {
     background-color: rgb(var(--secondaryBlue));
     color: rgb(var(--secondaryWhite));
@@ -180,7 +190,7 @@ nav ul li a:hover{
 .price-list {
     width: var(--divWidth);
     margin: 80px auto;
-    height: 800px;
+    height: 900px;
     padding: 0 50px;
     background-image: url(../img/splash.png);
     background-repeat: no-repeat;
@@ -194,41 +204,57 @@ nav ul li a:hover{
     background-color: rgb(var(--secondaryDarkGrey));
     width: 650px;
     height: 100%;
+    padding-bottom: 70px;
     margin: 0px auto;
     color: rgb(var(--secondaryWhite));
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 .price-div h1 {
-    font-family: 'Montserrat',
-    sans-serif;
-    font-weight: 500;
-    font-size: 70px;
-    padding-bottom: 40px;
-    text-transform: uppercase;
-    letter-spacing: 15px;
+    font-family: 'Whisper', cursive;
+    font-weight: 100;
+    font-size: 90px;
+    padding-bottom: 15px;
+    letter-spacing: 10px;
     text-align: center;
 }
+
+.price-div h2{
+    align-self: flex-start;
+    margin-left: 82px;
+    margin-bottom:  20px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
 
 .price-items {
     display: flex;
     width: 100%;
-    padding: 10px 85px;
+    padding: 5px 85px;
     justify-content: space-between;
 }
 
+
 .price-items li {
-    font-weight: 400;
+    font-weight: 100;
     font-size: 19px;
     letter-spacing: 2px;
 }
 
 .pi-last {
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
 
+.price-div img {
+    position: absolute;
+    bottom: 52px;
+    right: 90px;
+    width: 80px;
+}
 .price-div button {
     font-family: 'Montserrat',
     sans-serif;
@@ -239,6 +265,114 @@ nav ul li a:hover{
     font-weight: 600;
     letter-spacing: 6px;
 }
+
+/* Price description section */
+.price-description-section {
+    position: relative;
+    background-color: rgb(var(--secondaryWhite));
+}
+
+.price-description-splash1 {
+    position: absolute;
+    width: 100vw;
+    height: 1000px;
+    background: url(../img/splash-left.png);
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position: left;
+}
+.price-description-splash2 {
+    position: absolute;
+    transform: rotate(180deg);
+    width: 100vw;
+    height: 1000px;
+    background: url(../img/splash-left.png);
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position: left;
+    bottom: 50px;
+}
+
+.price-description-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: var(--divWidth);
+    height: 1800px;
+    margin: 0 auto;
+}
+
+.price-description-div h1{
+    margin: 0 auto 50px auto;
+    font-size: 45px;
+    font-weight: 300;
+    letter-spacing: 5px;
+}
+
+.price-description-grid-area {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px 30px;
+}
+
+.price-description-grid-area div {
+    border-radius: 40px 40px 0px 0px;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.price-description-card{
+    position: relative;
+}
+.price-description-card img {
+    z-index: -1;
+    width: 100%;
+    height: 280px;
+    margin: 0;
+    overflow: hidden;
+}
+/* this adds a angle section on top of the picture */
+.price-description-card .line {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    border-radius: 0;
+    border-top: 40px transparent solid;
+    border-right: 450px rgb(var(--secondaryWhite)) solid;
+    top: 240px;
+    
+}
+
+.price-description-card h1 {
+    z-index: 1;
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    padding-left: 20px;
+    margin: 2px 0 10px 0;
+}
+
+.price-description-card p {
+    padding: 0 20px 10px 20px;
+    text-align: justify;
+}
+
+.price-description-card a {
+    margin-left: 20px;
+}
+.price-description-card a button{
+    border: none;
+    background-color: transparent;
+    letter-spacing: 3px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+
 
 /* Picture galery*/
 
@@ -325,53 +459,6 @@ nav ul li a:hover{
         url("../img/pic3.jpg") no-repeat center center / cover;
 }
 
-/* My services description section */
-.my-services-description {
-    width: var(--divWidth);
-    margin: 0 auto;
-    
-}
-
-
-.share-the-love-section{
-    position: relative;
-    background-color: rgb(var(--secondaryWhite));
-}
-
-.share-the-love-splash {
-    position: absolute;
-    width: 100vw;
-    height: 1000px;
-    background: url(../img/splash-left.png);
-    background-repeat: no-repeat;
-    background-size: 20%;
-    background-position: left;
-}
-
-.share-the-love-div {
-        background: linear-gradient(270deg, rgba(var(--primaryPink), 1), rgba(var(--secondaryWhite), 0.01));
-    display: flex;
-    flex-direction: row;
-    width: var(--divWidth);
-    height: 800px;
-    /* border: 1px solid black; */
-    margin: 0 auto;
-}
-
-.share-the-love-image {
-    display: block;
-    margin-top: 50px;
-    width: 700px;
-    height: 700px;
-}
-
-.share-the-love-text {
-    display: block;
-    margin-top: 50px;
-    margin-left: 100px;
-    width: 500px;
-    height: 700px;
-}
 
 
 
