@@ -342,8 +342,11 @@ nav ul li a:hover{
     overflow: hidden;
 }
 
+
+
 .price-description-card{
     position: relative;
+    background-color: rgb(var(--primaryPink));
 }
 .price-description-card img {
     z-index: -1;
@@ -360,7 +363,7 @@ nav ul li a:hover{
     height: 0;
     border-radius: 0;
     border-top: 40px transparent solid;
-    border-right: 450px rgb(var(--secondaryWhite)) solid;
+    border-right: 450px rgb(var(--primaryPink)) solid;
     top: 240px;
     
 }
@@ -377,7 +380,7 @@ nav ul li a:hover{
 }
 
 .price-description-card p {
-    padding: 0 20px 10px 20px;
+    padding: 0 20px 40px 20px;
     text-align: justify;
 }
 
