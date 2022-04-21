@@ -7,6 +7,7 @@
     --secondaryBlue: 165, 221, 255;
     --secondaryDarkGrey: 51, 51, 51;
     --divWidth: 1400px;
+    --navWidth: 1500px;
 }
 
 .main-section-text button:hover,
@@ -50,10 +51,19 @@ a {
 }
 
 nav {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(var(--primaryPink),0.9);
+    z-index: 100000;
+}
+
+.nav-div {
     display: flex;
-    width: var(--divWidth);
+    justify-content:space-between;
+    width: var(--navWidth);
     margin: 0 auto;
 }
+
  nav ul{
     display: inline-flex;
     align-items: center;
@@ -61,14 +71,18 @@ nav {
 
 nav img {
     width: 80px;
-    margin: 20px 30px 20px 50px;
+    margin: 30px 0px;
 }
 
 nav ul li {
     z-index: 1;
-    padding: 0 50px;
+    padding-left: 70px;
     text-transform: uppercase;
     font-weight: 600;
+}
+
+nav ul li a{
+    font-size: 20px;
 }
 
 nav ul li a:hover{
@@ -77,10 +91,14 @@ nav ul li a:hover{
 
 
 /* Main Top Section */
+.main-section {
+    padding-top: 200px;
+}
+
 .main-picture {
     z-index: -10;
     position: absolute;
-    top: -70px;
+    top: 120px;
     right: 10%;
 }
 
@@ -246,7 +264,7 @@ nav ul li a:hover{
 }
 
 .pi-last {
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 }
 
 .price-div img {
@@ -264,6 +282,8 @@ nav ul li a:hover{
     font-size: 20px;
     font-weight: 600;
     letter-spacing: 6px;
+    border: 1px rgba(var(--secondaryWhite), 1) solid;
+    padding: 10px;
 }
 
 /* Price description section */
