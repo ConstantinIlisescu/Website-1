@@ -71,7 +71,7 @@ nav {
 
 nav img {
     width: 80px;
-    margin: 30px 0px;
+    margin: 10px 0px;
 }
 
 nav ul li {
@@ -287,21 +287,22 @@ nav ul li a:hover{
 }
 
 /* Price description section */
-.price-description-section {
+.section-area {
     position: relative;
     background-color: rgb(var(--secondaryWhite));
 }
 
-.price-description-splash1 {
+.splash1 {
     position: absolute;
     width: 100vw;
     height: 1000px;
     background: url(../img/splash-left.png);
     background-repeat: no-repeat;
+    background-color: inherit;
     background-size: 20%;
     background-position: left;
 }
-.price-description-splash2 {
+.splash2 {
     position: absolute;
     transform: rotate(180deg);
     width: 100vw;
@@ -482,6 +483,60 @@ nav ul li a:hover{
         url("../img/pic3.jpg") no-repeat center center / cover;
 }
 
+/* About me section */
+
+
+.about-me-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: var(--divWidth);
+    height: 1000pxpx;
+    margin: 0 auto;
+}
+
+.about-me-picture {
+    overflow: hidden;
+    width: 800px;
+    height: 1000px;
+    -webkit-transform: rotate(-15deg);
+    -moz-transform: rotate(-15deg);
+    -o-transform: rotate(-15deg);
+    -ms-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+}
+
+.about-me-picture img {
+    width: 180%;
+    position: relative;
+    top: -230px;
+    left: -320px;
+}
+
+.about-me-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    width: 550px;
+    height: 800px;
+}
+
+.about-me-text h1 {
+    font-size: 35px;
+    color: rgb(var(--secondaryDarkGrey));
+    margin-bottom: 50px;
+}
+
+/* Footer */
+.footer {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(var(--secondaryDarkGrey));
+}
 
 
 
