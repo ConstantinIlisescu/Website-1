@@ -532,10 +532,21 @@ nav ul li a:hover{
 
 /* Footer */
 .footer {
+    display: flex;
+    justify-content: space-between;
     position: relative;
     width: 100%;
     height: 100px;
     background-color: rgb(var(--secondaryDarkGrey));
+    color: rgb(var(--secondaryWhite));
+}
+
+.social-accounts img{
+    width: 50px;
+}
+
+.copyright p {
+    
 }
 
 
