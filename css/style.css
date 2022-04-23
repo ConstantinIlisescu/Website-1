@@ -8,6 +8,10 @@
     --secondaryDarkGrey: 51, 51, 51;
     --divWidth: 1000px;
     --navWidth: 1100px;
+    --card-width: 200px;
+    --card-height: 300px;
+    --card-transition-duration: 800ms;
+    --card-transition-easing: ease;
 }
 
 .main-section-text button:hover,
@@ -540,9 +544,13 @@ nav ul li a:hover{
 
 .diplomas-div {
     width: var(--divWidth);
-    height: 500px;
-    border: 1px solid black;
+    height: 600px;
     margin: 0 auto;
+    text-align: center;
+}
+.diplomas-div h1 {
+    letter-spacing: 4px;
+    padding: 20px 0;
 }
 
 
