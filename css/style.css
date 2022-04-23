@@ -6,8 +6,8 @@
     --secondaryPink: 255, 203, 203;
     --secondaryBlue: 165, 221, 255;
     --secondaryDarkGrey: 51, 51, 51;
-    --divWidth: 1400px;
-    --navWidth: 1500px;
+    --divWidth: 1000px;
+    --navWidth: 1100px;
 }
 
 .main-section-text button:hover,
@@ -295,7 +295,7 @@ nav ul li a:hover{
 .splash1 {
     position: absolute;
     width: 100vw;
-    height: 1000px;
+    height: 800px;
     background: url(../img/splash-left.png);
     background-repeat: no-repeat;
     background-color: inherit;
@@ -306,7 +306,7 @@ nav ul li a:hover{
     position: absolute;
     transform: rotate(180deg);
     width: 100vw;
-    height: 1000px;
+    height: 800px;
     background: url(../img/splash-left.png);
     background-repeat: no-repeat;
     background-size: 20%;
@@ -356,7 +356,7 @@ nav ul li a:hover{
     margin: 0;
     overflow: hidden;
 }
-/* this adds a angle section on top of the picture */
+/* this adds an angle section on top of the picture */
 .price-description-card .line {
     position: absolute;
     content: "";
