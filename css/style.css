@@ -89,8 +89,42 @@ nav ul li a{
     font-size: 20px;
 }
 
-nav ul li a:hover{
-    border-bottom: solid 3px rgb(var(--secondaryDarkGrey));
+nav ul li a .nav-line {
+    background-color: rgb(var(--secondaryDarkGrey));
+    width: 0%;
+    height: 4px;
+    border-radius: 50px;
+    margin: 0 auto;
+}
+
+nav ul li a:hover .nav-line{
+    -webkit-animation: hoverLine 3s infinite;
+    -moz-animation: hoverLine 3s infinite;
+    -o-animation: hoverLine 3s infinite;
+    animation: hoverLine 3s infinite;
+}
+
+/* to ensure compability with all browsers */
+@-webkit-keyframes hoverLine {
+    0% , 100% {
+        width: 10%;
+    }
+
+    50% {
+        width: 95%;
+    }
+    
+}
+
+@keyframes hoverLine {
+    0% , 100% {
+        width: 10%;
+    }
+    
+    50% {
+        width: 95%;
+    }
+    
 }
 
 
