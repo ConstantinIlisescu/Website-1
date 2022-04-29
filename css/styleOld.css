@@ -1,0 +1,625 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;900&family=Whisper&display=swap&family=Archivo+Black&family=Libre+Baskerville:ital@1&display=swap');
+
+:root {
+    --primaryPink: 255, 249, 246;
+    --secondaryWhite: 255, 255, 255;
+    --secondaryPink: 255, 203, 203;
+    --secondaryBlue: 165, 221, 255;
+    --secondaryDarkGrey: 51, 51, 51;
+    --divWidth: 1000px;
+    --navWidth: 1100px;
+    --card-max-width: 200px;
+    --card-height: 300px;
+    --card-transition-duration: 800ms;
+    --card-transition-easing: ease;
+}
+
+.main-section-text button:hover,
+.service button:hover,
+.price-div button:hover,
+.price-description-card a button:hover,
+.picture-galery:hover {
+    cursor: pointer;
+}
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(var(--secondaryDarkGrey));
+    background-color: rgb(var(--primaryPink));
+    font-size: 15px;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.main-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(var(--primaryPink),0.9);
+    z-index: 100000;
+}
+
+.nav-div {
+    display: flex;
+    justify-content:space-between;
+    max-width: var(--navWidth);
+    margin: 0 auto;
+}
+
+ nav ul{
+    display: inline-flex;
+    align-items: center;
+}
+
+nav img {
+    max-width: 80px;
+    margin: 10px 0px;
+}
+
+nav ul li {
+    z-index: 1;
+    padding-left: 70px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+nav ul li a{
+    font-size: 20px;
+}
+
+nav ul li a .nav-line {
+    background-color: rgb(var(--secondaryDarkGrey));
+    max-width: 0%;
+    min-height: 4px;
+    border-radius: 50px;
+    margin: 0 auto;
+}
+
+nav ul li a:hover .nav-line{
+    -webkit-animation: hoverLine 3s infinite;
+    -moz-animation: hoverLine 3s infinite;
+    -o-animation: hoverLine 3s infinite;
+    animation: hoverLine 3s infinite;
+}
+
+/* to ensure compability with all browsers */
+@-webkit-keyframes hoverLine {
+    0% , 100% {
+        max-width: 10%;
+    }
+
+    50% {
+        max-width: 95%;
+    }
+    
+}
+
+@keyframes hoverLine {
+    0% , 100% {
+        max-width: 10%;
+    }
+    
+    50% {
+        max-width: 95%;
+    }
+    
+}
+
+
+/* Main Top Section */
+.main-section {
+    padding-top: 200px;
+}
+
+.main-picture {
+    z-index: -10;
+    position: absolute;
+    top: 120px;
+    right: 10%;
+}
+
+.main-picture img {
+    max-width: 700px;
+}
+
+.main-section-text-div {
+    z-index: 1 ;
+    max-width: var(--divWidth);
+    min-height: 800px;
+}
+
+.main-section-text {
+    max-width: 800px;
+    text-align: right;
+}
+
+.main-section-text h1{
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 100px;
+    margin-top: 130px;
+    margin-bottom: 20px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.main-section-text h3 {
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.main-section-text button {
+    margin-top: 40px;
+    background-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    padding: 30px 60px;
+    font-weight:700;
+}
+
+
+
+/* Seccond section*/
+
+.second-section {
+    background-color: rgb(var(--secondaryWhite));
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    margin-top: 40px;
+}
+
+/* My services */
+
+.my-services{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: var(--divWidth);
+    margin: 10px auto;
+    min-height: 480px;
+    text-align: center;   
+}
+
+.my-services h1, .my-services button {
+        color: rgb(var(--secondaryBlue));
+}
+
+
+.service-1 {
+    background-color: rgb(var(--secondaryBlue));
+    border-radius: 0px 0px 0px 200px;
+}
+
+.service-1 h1 {
+    color: rgb(var(--secondaryWhite));
+    text-align: left;
+    margin-top: 160px;
+    padding-left: 22px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 40px;
+}
+
+.service img {
+    max-width: 80px;
+    padding: 40px 0;
+}
+
+.service h1 {
+    margin-bottom: 20px;
+}
+
+
+.service button {
+    background-color: rgb(var(--secondaryBlue));
+    color: rgb(var(--secondaryWhite));
+    border: none;
+    border-radius: 80px;
+    padding: 10px 50px;
+    text-transform: uppercase;
+    margin-top: 150px;
+    letter-spacing: 4px;
+}
+
+/* Price list */
+.price-list {
+    max-width: var(--divWidth);
+    margin: 80px auto;
+    min-height: 900px;
+    padding: 0 50px;
+    background-image: url(../img/splash.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+
+
+}
+        
+.price-div {
+    background-color: rgb(var(--secondaryDarkGrey));
+    max-width: 650px;
+    min-height: 100%;
+    padding-bottom: 70px;
+    margin: 0px auto;
+    color: rgb(var(--secondaryWhite));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.price-div h1 {
+    font-family: 'Whisper', cursive;
+    font-weight: 100;
+    font-size: 90px;
+    padding-bottom: 15px;
+    letter-spacing: 10px;
+    text-align: center;
+}
+
+.price-div h2{
+    align-self: flex-start;
+    margin-left: 82px;
+    margin-bottom:  20px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+
+.price-items {
+    display: flex;
+    max-width: 100%;
+    padding: 5px 85px;
+    justify-content: space-between;
+}
+
+
+.price-items li {
+    font-weight: 100;
+    font-size: 19px;
+    letter-spacing: 2px;
+}
+
+.pi-last {
+    margin-bottom: 60px;
+}
+
+.price-div img {
+    position: absolute;
+    bottom: 52px;
+    right: 90px;
+    max-width: 80px;
+}
+.price-div button {
+    font-family: 'Montserrat',
+    sans-serif;
+    border: none;
+    background-color: transparent;
+    color: rgb(var(--secondaryWhite));
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 6px;
+    border: 1px rgba(var(--secondaryWhite), 1) solid;
+    padding: 10px;
+}
+
+/* Price description section */
+.section-area {
+    position: relative;
+    background-color: rgb(var(--secondaryWhite));
+}
+
+.splash1 {
+    position: absolute;
+    max-width: 100vw;
+    min-height: 800px;
+    background: url(../img/splash-left.png);
+    background-repeat: no-repeat;
+    background-color: inherit;
+    background-size: 20%;
+    background-position: left;
+}
+.splash2 {
+    position: absolute;
+    transform: rotate(180deg);
+    max-width: 100vw;
+    min-height: 800px;
+    background: url(../img/splash-left.png);
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position: left;
+    bottom: 50px;
+}
+
+.price-description-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: var(--divWidth);
+    min-height: 1800px;
+    margin: 0 auto;
+}
+
+.price-description-div h1{
+    margin: 0 auto 50px auto;
+    font-size: 45px;
+    font-weight: 300;
+    letter-spacing: 5px;
+}
+
+.price-description-grid-area {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px 30px;
+}
+
+.price-description-grid-area div {
+    border-radius: 40px 40px 0px 0px;
+    max-width: 100%;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+
+
+.price-description-card{
+    position: relative;
+    background-color: rgb(var(--primaryPink));
+}
+.price-description-card img {
+    z-index: -1;
+    max-width: 100%;
+    min-height: 280px;
+    margin: 0;
+    overflow: hidden;
+}
+/* this adds an angle section on top of the picture */
+.price-description-card .line {
+    position: absolute;
+    content: "";
+    max-width: 100%;
+    min-height: 0;
+    border-radius: 0;
+    border-top: 40px transparent solid;
+    border-right: 450px rgb(var(--primaryPink)) solid;
+    top: 240px;
+    
+}
+
+.price-description-card h1 {
+    z-index: 1;
+    max-width: 100%;
+    min-height: 30px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    padding-left: 20px;
+    margin: 2px 0 10px 0;
+}
+
+.price-description-card p {
+    padding: 0 20px 40px 20px;
+    text-align: justify;
+}
+
+.price-description-card a {
+    margin-left: 20px;
+}
+.price-description-card a button{
+    border: none;
+    background-color: transparent;
+    letter-spacing: 3px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+
+
+/* Picture galery*/
+
+.picture-galery {
+        max-width: var(--divWidth);
+        margin: 80px auto;
+        min-height: 800px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+}
+
+.pics h1 {
+    color: rgba(var(--secondaryDarkGrey),0.6);
+    font-size: 30px;
+    padding-top: 450px;
+    letter-spacing: 3px;
+}
+
+.h1-wrap{
+    background-color: rgb(var(--secondaryPink));
+    border-radius: 0 0 200px 0;
+    overflow: hidden;
+    padding-top: 250px;
+    padding-right: 0px;
+    padding-left:0px;
+    max-width: 100%;
+    min-height: 700px;
+    text-align: center;
+    top: -40px;
+    bottom: auto;
+    text-align: center;
+    letter-spacing: 7px;
+}
+
+.h1-wrap h1 {
+    color: rgb(var(--secondaryWhite));
+    font-size: 35px;
+    transform: rotate(-90deg);
+}
+
+
+.pics.p1 {
+    position: relative;
+    top: 150px;
+    overflow: hidden;
+    border-radius: 0 0 200px 200px;
+    min-height: 70%;
+    max-width: 100%;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    place-content: center;
+    background:linear-gradient(180deg, rgba(var(--secondaryWhite),1) 10%, rgba(var(--secondaryWhite), 0.1)), 
+    url("../img/pic1.jpg") no-repeat center center / cover;
+}
+
+.pics.p2 {
+        position: relative;
+        top: 0px;
+        overflow: hidden;
+        border-radius:200px 200px 0 0;
+        min-height: 70%;
+        max-width: 100%;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        place-content: center;
+        background:linear-gradient(180deg, rgba(var(--secondaryWhite), 0.01) 30%, rgba(var(--secondaryWhite), 1)) ,
+        url("../img/pic2.jpg") no-repeat center center / cover;
+}
+
+.pics.p3 {
+    position: relative;
+    z-index: 5;
+    top: 400px;
+    overflow: hidden;
+    border-radius: 0 0 200px 200px;
+    min-height: 70%;
+    max-width: 100%;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    place-content: center;
+    background: linear-gradient(180deg, rgba(var(--secondaryWhite), 1) 30%, rgba(var(--secondaryWhite), 0.01)),
+        url("../img/pic3.jpg") no-repeat center center / cover;
+}
+
+/* About me section */
+
+
+.about-me-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    max-width: var(--divWidth);
+    min-height: 800px;
+    margin: 0 auto;
+}
+
+.about-me-picture {
+    overflow: hidden;
+    max-width: 600px;
+    min-height: 500px;
+    -webkit-transform: rotate(-15deg);
+    -moz-transform: rotate(-15deg);
+    -o-transform: rotate(-15deg);
+    -ms-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+}
+
+.about-me-picture img {
+    max-width: 200%;
+    position: relative;
+    top: -270px;
+    left: -300px;
+}
+
+.about-me-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    max-width: 400px;
+    min-height: 500px;
+    padding: 0 10px;
+}
+
+.about-me-text h1 {
+    font-size: 35px;
+    color: rgb(var(--secondaryDarkGrey));
+    margin-bottom: 50px;
+}
+
+/* Diplomas */
+.diplomas {
+    max-width: 100vw;
+    background-color: rgb(var(--secondaryWhite));
+}
+
+.diplomas-div {
+    max-width: var(--divWidth);
+    min-height: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+.diplomas-div h1 {
+    letter-spacing: 4px;
+    padding: 20px 0;
+}
+
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    position: relative;
+    max-width: 100%;
+    min-height: 100px;
+    background-color: rgb(var(--secondaryDarkGrey));
+    color: rgb(var(--secondaryWhite));
+}
+
+.social-accounts {
+    display: flex;
+    align-items: center;
+}
+
+.social-accounts .awesome-icons {
+    color: rgb(var(--secondaryWhite));
+    font-size: 50px;
+    margin: 0 10px;
+}
+.copyright p , .social-accounts p{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+
+
+
+

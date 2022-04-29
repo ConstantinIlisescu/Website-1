@@ -17,8 +17,15 @@
     </head>
 
     <body>
-        <nav>
+        <button class="hamburger" style="z-index: 100;">
+            <div class="line-top"></div>
+            <div class="line-mid"></div>
+            <div class="line-bottom"></div>
+        </button>
+
+        <nav class="mobile-nav" style="z-index: 99;">
             <div class="nav-div">
+
                 <img class="logo" src="./img/logo.png" alt="logo">
                 <ul>
                     <li><a href="#">About <div class="nav-line"></div> </a></li>
@@ -28,16 +35,18 @@
                 </ul>
             </div>
         </nav>
-        <section class="main-section">
+        <section class="main-section" style="z-index: 98;">
 
-            <div class="main-picture">
-                <img src="./img/mainPic.jpg" alt="nails getting polished">
-            </div>
-            <div class="main-section-text-div">
-                <div class="main-section-text">
-                    <h1>Lavinia <br> Nail Salon</h1>
-                    <h3>Dare to be Amazed</h3>
-                    <a href="#"><button>Book an appointment</button></a>
+            <div class="main-section-wrap">
+                <div class="main-picture">
+                    <img src="./img/mainPic.jpg" alt="nails getting polished">
+                </div>
+                <div class="main-section-text-div">
+                    <div class="main-section-text">
+                        <h1>Lavinia <br> Nail Salon</h1>
+                        <h3>Dare to be Amazed</h3>
+                        <button><a href="#"></a>Book an appointment</a></button>
+                    </div>
                 </div>
             </div>
 
@@ -369,10 +378,12 @@
 
         </section>
 
+
         <!-- Img carousel -->
         <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
         <script src="./js/carousel_script.js"></script>
+        <script src="./js/main.js"></script>
         <!-- END of Img carousel -->
     </body>
 
